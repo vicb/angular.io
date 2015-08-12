@@ -1,7 +1,7 @@
 
 p.location-badge.
-  exported from <a href='../http'>angular2/http</a>
-  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/http/backends/browser_xhr.ts#L1-L8">angular2/src/http/backends/browser_xhr.ts (line 1)</a>
+  exported from <a href='../router'>angular2/router</a>
+  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/di/opaque_token.ts#L1-L10">angular2/src/di/opaque_token.ts (line 1)</a>
 
 :markdown
   
@@ -10,10 +10,10 @@ p.location-badge.
 .l-main-section
   h2 Annotations
   .l-sub-section
-    h3.annotation Injectable
+    h3.annotation CONST
     pre.prettyprint
       code.
-        @Injectable()
+        @CONST()
 
 
 .l-main-section
@@ -24,7 +24,7 @@ p.location-badge.
     
     pre.prettyprint
       code.
-        constructor()
+        constructor(desc: string)
     
     :markdown
       
@@ -34,12 +34,12 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 build
+    h3 toString
 
     
     pre.prettyprint
       code.
-        build()
+        toString()
     
     :markdown
       

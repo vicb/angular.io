@@ -88,19 +88,7 @@
     "title" : "KeyValueDifferFactory Interface"
   },
 
-  "PipeFactory-interface" : {
-    "title" : "PipeFactory Interface"
-  },
-
   "BasePipe-class" : {
     "title" : "BasePipe Class"
-  },
-
-  "NullPipe-class" : {
-    "title" : "NullPipe Class"
-  },
-
-  "NullPipeFactory-class" : {
-    "title" : "NullPipeFactory Class"
   }
 }

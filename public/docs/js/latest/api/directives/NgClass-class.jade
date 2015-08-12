@@ -1,7 +1,7 @@
 
 p.location-badge.
   exported from <a href='../directives'>angular2/directives</a>
-  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/directives/class.ts#L11-L110">angular2/src/directives/class.ts (line 11)</a>
+  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/directives/ng_class.ts#L11-L110">angular2/src/directives/ng_class.ts (line 11)</a>
 
 :markdown
   Adds and removes CSS classes based on an {expression} value.
@@ -18,7 +18,7 @@ p.location-badge.
   # Example:
   
   ```
-  <div class="message" [class]="{error: errorCount > 0}">
+  <div class="message" [ng-class]="{error: errorCount > 0}">
       Please check errors.
   </div>
   ```
@@ -32,9 +32,9 @@ p.location-badge.
     pre.prettyprint
       code.
         @Directive({
-          selector: &#39;[class]&#39;,
+          selector: &#39;[ng-class]&#39;,
           lifecycle: [LifecycleEvent.onCheck, LifecycleEvent.onDestroy],
-          properties: [&#39;rawClass: class&#39;]
+          properties: [&#39;rawClass: ng-class&#39;]
         })
 
 

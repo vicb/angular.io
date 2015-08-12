@@ -1,7 +1,7 @@
 
 p.location-badge.
-  exported from <a href='../http'>angular2/http</a>
-  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/http/backends/jsonp_backend.ts#L9-L89">angular2/src/http/backends/jsonp_backend.ts (line 9)</a>
+  exported from <a href='../router'>angular2/router</a>
+  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/router/url_parser.ts#L8-L37">angular2/src/router/url_parser.ts (line 8)</a>
 
 :markdown
   
@@ -14,7 +14,7 @@ p.location-badge.
     
     pre.prettyprint
       code.
-        constructor(req: Request, _dom: BrowserJsonp, baseResponseOptions?: ResponseOptions)
+        constructor(path: string, child?: Url, auxiliary?: List&lt;Url&gt;, params?: StringMap&lt;string, any&gt;)
     
     :markdown
       
@@ -24,19 +24,7 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 readyState
-
-    
-    :markdown
-      
-      
-
-
-
-
-
-  .l-sub-section
-    h3 request
+    h3 path
 
     
     :markdown
@@ -48,7 +36,7 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 response
+    h3 child
 
     
     :markdown
@@ -60,7 +48,7 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 baseResponseOptions
+    h3 auxiliary
 
     
     :markdown
@@ -72,12 +60,24 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 finished
+    h3 params
+
+    
+    :markdown
+      
+      
+
+
+
+
+
+  .l-sub-section
+    h3 toString
 
     
     pre.prettyprint
       code.
-        finished(data?: any)
+        toString()
     
     :markdown
       
@@ -88,12 +88,12 @@ p.location-badge.
 
 
   .l-sub-section
-    h3 dispose
+    h3 segmentToString
 
     
     pre.prettyprint
       code.
-        dispose()
+        segmentToString()
     
     :markdown
       

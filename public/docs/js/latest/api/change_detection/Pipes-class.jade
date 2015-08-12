@@ -1,7 +1,7 @@
 
 p.location-badge.
   exported from <a href='../change_detection'>angular2/change_detection</a>
-  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/change_detection/pipes/pipes.ts#L6-L117">angular2/src/change_detection/pipes/pipes.ts (line 6)</a>
+  defined in <a href="https://github.com/angular/angular/tree/2.0.0-alpha.34/modules/angular2/src/change_detection/pipes/pipes.ts#L5-L84">angular2/src/change_detection/pipes/pipes.ts (line 5)</a>
 
 :markdown
   
@@ -31,7 +31,7 @@ p.location-badge.
     
     pre.prettyprint
       code.
-        constructor(config: StringMap&lt;string, PipeFactory[]&gt;)
+        constructor(config: StringMap&lt;string, Type | Binding&gt;, injector: Injector)
     
     :markdown
       
@@ -45,21 +45,32 @@ p.location-badge.
 
     
     :markdown
-      Map of <a href='Pipe-interface.html'><code>Pipe</code></a> names to <a href='PipeFactory-interface.html'><code>PipeFactory</code></a> lists used to configure the
-      <a href='Pipes-class.html'><code>Pipes</code></a> registry.
+      Map of <a href='Pipe-interface.html'><code>Pipe</code></a> names to <a href='Pipe-interface.html'><code>Pipe</code></a> implementations.
       
       #Example
       
       ```
       var pipesConfig = {
-        'json': [jsonPipeFactory]
+        'json': JsonPipe
       }
       @Component({
         viewBindings: [
-          bind(Pipes).toValue(new Pipes(pipesConfig))
+          bind(Pipes).toFactory(inj => new Pipes(pipesConfig, in), [Injector])
         ]
       })
       ```
+      
+      
+
+
+
+
+
+  .l-sub-section
+    h3 injector
+
+    
+    :markdown
       
       
 
@@ -73,7 +84,7 @@ p.location-badge.
     
     pre.prettyprint
       code.
-        get(type: string, obj: any, cdRef?: ChangeDetectorRef, existingPipe?: Pipe)
+        get(type: string, cdRef: ChangeDetectorRef)
     
     :markdown
       
